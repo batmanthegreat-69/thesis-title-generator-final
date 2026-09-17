@@ -40,13 +40,6 @@ app.post('/api/generate', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-
-// Only listen locally if not running on Vercel
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`Thesis title generator running at http://localhost:${PORT}`);
-  });
-}
-
-// Export the express app for Vercel's serverless functions
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Thesis title generator running at http://localhost:${PORT}`);
+});
