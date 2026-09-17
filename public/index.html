@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thesis Title Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Thesis / Capstone Title Generator</h1>
+    <p class="subtitle">Pick your preferences and get novelty-checked title suggestions.</p>
+
+    <form id="pref-form">
+      <label>
+        Program
+        <select name="program" required>
+          <option value="">-- Select --</option>
+          <option>BS Computer Science</option>
+          <option>BS Information Technology</option>
+          <option>BS Computer Engineering</option>
+        </select>
+      </label>
+
+      <label>
+        Community setting
+        <select name="community" id="community-select" required>
+          <option value="">-- Select --</option>
+          <option>Urban area</option>
+          <option>Peri-urban area</option>
+          <option>Rural area</option>
+          <option>Bukid / agricultural community</option>
+          <option>Coastal community</option>
+          <option>Island / remote community</option>
+          <option>Upland / indigenous community</option>
+          <option>Informal settlement / urban poor community</option>
+          <option>Campus / school community</option>
+        </select>
+      </label>
+
+      <label>
+        Platform
+        <select name="platform" required>
+          <option value="">-- Select --</option>
+          <option>IoT</option>
+          <option>Web-based</option>
+          <option>Desktop</option>
+          <option>Mobile</option>
+          <option>Hybrid (Web + Mobile)</option>
+          <option>Cloud-based</option>
+          <option>Embedded system</option>
+          <option>AR/VR</option>
+        </select>
+      </label>
+
+      <label>
+        Problem domain
+        <select name="domain" id="domain-select" required>
+          <option value="">-- Select --</option>
+          <option>Health</option>
+          <option>Agriculture</option>
+          <option>Education</option>
+          <option>Disaster / safety</option>
+          <option>Transportation</option>
+          <option>Security</option>
+          <option>Environment</option>
+          <option>Tourism</option>
+          <option>Governance / public service</option>
+          <option>Livelihood / commerce</option>
+          <option>Accessibility / PWD support</option>
+          <option>Sports / fitness</option>
+        </select>
+        <small id="domain-hint" class="hint"></small>
+      </label>
+
+      <label>
+        Method / technique
+        <select name="method" required>
+          <option value="">-- Select --</option>
+          <option>Computer vision</option>
+          <option>Natural language processing</option>
+          <option>Recommender system</option>
+          <option>Predictive analytics</option>
+          <option>IoT sensing</option>
+          <option>Speech recognition</option>
+          <option>Data analytics / big data</option>
+          <option>Blockchain</option>
+          <option>Expert system / rule-based</option>
+          <option>Robotics / automation</option>
+          <option>Cybersecurity</option>
+        </select>
+      </label>
+
+      <button type="submit" id="generate-btn">Generate titles</button>
+    </form>
+
+    <section id="status" aria-live="polite"></section>
+    <ul id="results"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
